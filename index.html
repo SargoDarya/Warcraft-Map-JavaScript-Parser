@@ -1,0 +1,17 @@
+<html>
+
+<head>
+	<title>Parser Test</title>
+</head>
+
+<body>
+	<script>
+	var worker = new Worker('js/MapLoader.js');
+	worker.postMessage('BBay.w3m');
+	worker.addEventListener('message', function(e){
+		console.log(e.data);
+	});
+	</script>
+</body>
+
+</html>
